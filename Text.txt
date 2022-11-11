@@ -1,0 +1,645 @@
+user@user-IdeaPad-Gaming-3-15IMH05:~$ cd Desktop/
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop$ cd en\ 25/
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop$ mkdir gittest
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop$ ls
+'en 25'   gittest   testdirectory
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop$ cd gittest
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ touch hello.txt
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ nano hello.txt 
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ cat hello.txt 
+Hello world s vami Kani!
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git init
+Initialized empty Git repository in /home/user/Desktop/gittest/.git/
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ ls -a
+.  ..  .git  hello.txt
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.txt
+nothing added to commit but untracked files present (use "git add" to track)
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git config --list
+user.name=Kydyrbek97
+user.email=Kydyrali_097@mail.ru
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git config --list
+user.name=Kydyrbek97
+user.email=Kydyrali_097@mail.ru
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git add .
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git commit -m 'initial commit'
+[main (root-commit) 448be70] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git branch -M main
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git status
+On branch main
+nothing to commit, working tree clean
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git remote add origin git@github.com:Kydyrbek97/test_repo.git
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 241 bytes | 241.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Kydyrbek97/test_repo.git
+ * [new branch]      main -> main
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ nano hello.txt 
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ cat hello.txt 
+Hello world s vami Kani!
+My name is Kydyrbek!
+My favorite movie is LOTR
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git add .
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git commit -m 'aded my name'
+[main 55b461d] aded my name
+ 1 file changed, 2 insertions(+)
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Kydyrbek97/test_repo.git
+   448be70..55b461d  main -> main
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ ^C
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ nano hello.txt 
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ cat hello.txt 
+Hello world s vami Kani!
+My name is Kydyrbek!
+My favorite movie is LOTR
+Сегодня прекрасный день для изучения нового материала!
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git add .
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git commit -m 'aded today'[main 28f79b7] aded today
+ 1 file changed, 1 insertion(+)
+user@user-IdeaPad-Gaming-3-15IMH05:~/Desktop/gittest$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 390 bytes | 390.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Kydyrbek97/test_repo.git
+   55b461d..28f79b7  main -> main
+   
+ ===========================================================================================================================================
+ 1
+# Дана переменная с длиной стороны квадрата, найдите периметр и площадь, распечатайте результат в терминале
+
+# a = int(input('Введите число:'))
+# p = a*4  
+# print("Периметр:",p)
+# a = int(input('Введите число:'))
+# s = a**2
+# print("Площадь:",s)
+
+
+2
+# Даны переменные со сторонами прямоугольника, найдите периметр и площадь, распечатайте результат в терминале
+
+# a = int(input("Длина: "))
+# b = int(input("Ширина: "))
+# s = a*b
+# print("Площадь прямоугольника:",s)
+# a = int(input("Длина: "))
+# b = int(input("Ширина: "))
+# p = (a + b) * 2
+# print("Периметр прямоугольника:",p)
+
+
+
+
+3
+# Дана переменная с радиусом окружности, найдите периметр и площадь окружности, результат выведите в терминал
+
+# import math
+# from math import pi
+# r = float (input ('Введите число:'))
+# p = 2 * math.pi * r 
+# print ('Периметр:', p)
+# r = float (input ('Введите число:'))
+# s = math.pi* r ** 2 
+# print ('Площадь:',s)
+
+
+
+
+4
+# Даны две переменные с четными числами, переумножьте первое число саму на себя столько раз, сколько хранится число во второй переменной, вторую переменную переумножьте, соответственно столько раз, сколько хранится в первой переменной, распечатайте результат в терминале
+
+# a = int((input("Введите число:")))
+# b = a**a
+# print(b)
+ 
+
+
+5
+# Дана переменная с отрицальным числом, сделайте её позитивным, распечатайте результат
+
+# from math import fabs
+# a = int(input("Введите отрицательные число:"))
+# negative = a
+# print('Позитив:',fabs(negative))
+
+
+
+6
+# Дана переменная с температурой воздуха по фаренгейту(float), переведите это значение в температуру по Цельсию, и распечатайте результат в терминале
+
+# f = float (input ("Фаренгейт:") )
+# c = (f-32)*5/9
+# print ("Цельсий", c)
+
+7
+# От Бишкека до Москвы расстояние составляет 3 738 км, вычеслити расстояние от Бишкека до Москвы в метрах, и распечатайте результат в терминале 
+
+# Bishkek_Moskva = 3738
+# metr = 1000
+# res = metr * Bishkek_Moskva
+# print ("От Бишкека до Москвы:", res, "метр")
+
+
+8
+# Дана переменная со целочисленным значением весса муки в 255 тонны, найдите сколько это будет в граммах, килограммах, центнерах, распечатайте результат в терминале 
+
+# Muka = 255
+# Gramm = 1000000
+# Kg = 1000
+# Sent = 10
+# res = Muka * Gramm
+# res1 = Muka * Kg
+# res2 = Muka * Sent
+# print ("255 тонн мука:", res2, "центнер", res1,"килограмм", res,"грамм")
+
+9
+# Найдите сколько месяцев и дней пройдёт за 7 лет, распечатайте результат в терминале (в 1 году 365 дней)
+
+# month = 12
+# day = 365 
+# year = 7
+# res = month * year
+# res1 = day * year
+# print ("За 7 лет :", res,"Месяц",res1,"День",)
+
+10
+# Высота небоскрёба 513 метров, рассчитайте сколько будет этажей в здании, если высота одного этажа планируется в 2.7 метров, результат распечатайте в терминале 
+
+# vysota = 513
+# etaj = 2.7
+# res = vysota / etaj
+# print ("Небоскрёб:",res, "этаж")
+
+11
+# Работнику начисляли зарплату в 2400 долларов 15 месяцев, распечатайте сколько заработал за этот период работник, в сомах, курс доллара к сому использовать 84 сома к 1 доллару, результат распечатайте в терминале
+
+# zarplata = 2400
+# som = 84
+# res = zarplata * som
+# print ("Заработал:",res, "сом")
+============================================================================================================================================
+# 1. Объявите переменную string со значением в виде любой строки. Переведите все её символы в противоположный регистр. 
+# К примеру, если в string хранится строка: hELLO wORLD 
+# вывод: Hello World
+
+# string = 'hELLO wORLD'
+# result = string.swapcase()
+# print(result)
+
+
+
+# 2. Объявите переменную string со значением в виде любой строки. размножьте строку при этом, каждое повторение должно быть на новой строке, необходимо использовать экранирование. Необходимо использовать функцию print() один раз.
+# К примеру, если в string хранится строка: hello world 
+# вывод: 
+# hello world
+# hello world
+# hello world
+
+# string = 'hello world'
+# print((string+ '\n')*3)
+
+
+
+
+# 3. Объявите переменную string со значением в виде любой строки. Необходимо найти индекс нужной нам подстроки.
+# К примеру, если в string хранится строка: "...Makers"
+# необходимо найти индекс подстроки "e"
+# вывод: 6
+
+# string = '...Makers'
+# print(string.index('e'))
+
+
+
+# 4. Объявите переменную string со значением в виде любой строки. Необходимо проверить начинается ли ваша строка с подстроки "Python". вывод: True/False
+
+# string = 'Python is the best'
+# start = 'Python'
+# print(string[:len(start)] == start)
+
+
+# 5. Объявите переменную string со значением в виде любой строки. Проверьте состоит ли ваша строка из чисел вывод: True/False
+
+
+# string = '1234567890a'
+# for i in string:
+#     if i not in '1234567890':
+#         print(False)
+#         break
+# else:
+#     print(True)
+
+
+# 6. Объявите переменную string со значением в виде любой строки используя пробел. Разделите строку по разделителю (пробелу) чтобы получился массив (лист).
+# К примеру, если в string хранится строка: "Hello World"
+# вывод: ['Hello', 'World']
+
+# string = 'Hello World'
+# print(string.split())
+
+
+# 7. Объявите переменную string значением которой будет input(). Выведите ее значение используя интерполяцию строк (Hello и значение переменной string)
+# К примеру, если в переменной string хнанится строка: "Makers"
+# Вывод: Hello Makers
+
+# string = input('Введите текст: ')
+# print('Hello ' + f'{string}')
+
+# 8. Объявите переменные string и string2 со значением в виде любой строки. выведите значение данных переменных используя интерполяцию строк Необходимо использовать функцию print() только один раз.
+# К примеру, если в string хранится строка "Hello", а в переменной string2 хранится строка "World"
+# Вывод: Hello World
+
+# string1 = 'Hello'
+# string2 = 'World'
+# print(f'{string1} {string2}')
+
+
+# 9. Запросите у пользователя ввод его имени, фамилии и возраста.  Сохраните эти данные в соответсвующие переменные name, surname и age. С помощью интерполяции строк выведите краткую информацию о себе
+# например: "Меня зовут Иван Пупкин, Мой возраст: 35"
+
+# name = 'Кыдырбек'
+# surname = 'Маматкулов'
+# age = '25'
+# result = f'Меня зовут {name} {surname}, Мой возраст: {age}'
+# print(result)
+
+# 10. Даны две переменные s1 = "America" и s2 = "Japan".  Выведите новую строку в который будут записаны первый, средний и последний элемент двух переменных.  Необходимо использовать срезы.
+# Вывод: "AJrpan".
+
+# s1 = 'America'
+# s2 = 'Japan'
+# print(
+#     f"{s1[0]}{s2[0]}" 
+#     f"{s1[len(s1)//2]}{s2[len(s2)//2]}" 
+#     f"{s1[-1]}{s2[-1]}" 
+# )
+
+
+# 11. Объявите переменную string значением которой будет несколько хэштегов, разделённых символом '#'. Разделите их в отдельные строки.
+# Например: #makers#bootcamp#программирование#it#курсы 
+# Вывод: ['makers', 'bootcamp', 'программирование', 'it', 'курсы']
+
+# string = '#makers#bootcamp#программирование#it#курсы'
+# result = string.split('#')[1:]
+# print(result)
+
+ 
+# 12. Дана строка с пробелами в начале строки. Избавьтесь от пробелов и выведите количество символов в строке. 
+# Например:
+# "      Как прекрасен этот мир!"
+# Вывод: "Как прекрасен этот мир!"
+# 23
+
+# string = "      Как прекрасен этот мир!   "
+# print(string.strip(), len(string.strip()), sep='\n')
+
+# 13. Дана строка "корова любит молоко". Замените в ней только первые две буквы "о" на "ж".
+
+# string = 'корова любит молоко'
+# print(string.replace('о', 'ж', 2))
+===================================================================================================================================================================================================
+Login: kamchy.egemberdiuulu@gmail.com
+Parol: kamchy2000202
+
+Login: kanat.ahmat02@gmail.com
+Parol: kanat1207
+
+Login: aiperi.raimkulova96@gmail.com
+Parol: aiperi151022
+------------------------------------------------
+
+joa378674@gmail.com
+msertd24345
+-----------------------------------------------
+pionin53264@gmial.com
+msertd24345
+===================================================================================================================================================================================================
+
+
+
+
+
+"""=================EASY=================="""
+# /// TASK1 \\\
+# Дан список целых чисел, найдите минимальное значение, не используя встренную функцию min()
+# Например:
+# list_ = [20, 10, 20, 1, 100]
+# Результат:
+# min_number = 1
+
+
+# list_ = [20, 10, 20, 1, 100]
+# list_.sort()
+# print(list_[0])
+
+
+# /// TASK2 \\\
+# Дан список с кортежами, выведите список без пустых кортежей
+# Например:
+# tuples = [(), ('ram','15','8'), (), ('laxman', 'sita')]
+# Результат:
+# cleared_tuples = [('ram','15','8'), ('laxman', 'sita')]
+
+
+
+# tuple_ =[(), ('ram','15','8'), (), ('laxman', 'sita')]
+# for cleared_tuples in tuple_:
+#   if len(cleared_tuples) == 0: 
+#     tuple_.remove(cleared_tuples)
+# print(f'cleared_tuples = {tuple_}')
+
+
+
+# /// TASK3 \\\
+# Запросите у пользователей 5 раз их имя и фамилию, но в списке сохраните лишь фамилию, также учтите, что
+# у человека ФИО может состоять не только из 2 слов. При выводе должен выходить отсортированный
+# в алфавитном порядке список
+
+# Наример:
+# Name: Maya Angelou
+# Name: Chimamanda Ngozi Adichie
+# Name: Tobias Wolff
+# Name: Sherman Alexie
+# Name: Jane Austen
+# Результат:
+# ['Adichie', 'Alexie', 'Angelou', 'Austen', 'Wolff']
+
+
+# names = ['Maya Angelou','Chimamanda Ngozi Adichie','Tobias Wolff','Sherman Alexie','Jane Austen']
+# result = []
+# for x in names:
+#     x = x.split(' ')
+#     print(x)
+#     result.append(x[-1])
+# result.sort()
+# print(result)
+
+
+
+# /// TASK4 \\\
+# Вам дан список из чисел, и переменная x в которой хранится число, 
+# посчитайте сколько вхождений этого числа в этом списке 
+
+# Например:
+# list_ = [8, 6, 8, 10, 8, 20, 10, 8, 8]
+# x = 8
+# Результат:
+# 5
+
+
+# list_ = [8, 6, 8, 10, 8, 20, 10, 8, 8]
+# x = 8
+# print(list_.count(x))
+
+
+
+# /// TASK5 \\\
+# Вам дан список с числами и строками, найдите сумму чисел в этом списке не используя функцию sum()
+# Например:
+# lists = [1, 'abcd', 3, 1.2, 4, 'xyz', 5, 'pqr', 7, -5, -12.22]
+# Результат:
+# 20
+
+
+
+# lists = [1, 'abcd', 3, 1.2, 4, 'xyz', 5, 'pqr', 7, -5, -12.22]
+# s = 4
+# for x in lists:
+#   if type(x) == int or type(x)==float:
+#     s += 2
+# print(s)
+
+
+
+# /// TASK6 \\\
+# Вам дан список из строк, в которых длина строки равна 2 или более, в новый список запишите индексы тех строк, у которых
+# первый и последний символы совпадают.
+# Например:
+# str_list = ['abc', 'xyz', 'aba', '1221']
+# Результат:
+# indexs = [2, 3]
+
+
+
+
+
+
+# /// TASK7 \\\
+# У вас есть список со вложенными списками, выведите самый длинный список и самый короткий
+# Например:
+# lists = [[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
+# Результат:
+# max_list [13, 15, 17]
+# max_list [0]
+
+
+# lists = [[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
+# lists.sort()
+# print(f'max_list {lists[-1]} \nmin_list[0]')
+
+
+# /// TASK8 \\\
+# Вам дан список, напишите код, который будет соединять в новый список элементы по n-ному шагу
+# Например:
+# n = 3
+# list_ = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+# Результат:
+# [['a', 'd', 'g', 'j', 'm'], ['b', 'e', 'h', 'k', 'n'], ['c', 'f', 'i', 'l']]
+
+
+
+# list_ = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+
+# n = 3
+# list1 = []
+# list2 = []
+# list3 = []
+
+# for x in range(0, len(list_), n):
+#     list1.append(list_[x])
+#     list2.append(list_[x+1])
+#     if x + 2 >= len(list_):
+#         continue
+#     list3.append(list_[x+2])
+
+
+# res = [list1, list2, list3]
+# print(res)
+
+
+
+# /// TASK9 \\\
+# Напишите код для создания матрицы с размером 3x3
+# Результат:
+# [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+
+
+# list_ =[[1, 2, 3]]
+# print(list_*3)
+
+
+
+# /// TASK10 \\\
+# Вам дан список со словами, пользователь вводит первую букву слова, которое он ищет, 
+# ваш код должен вывести список со всеми словами начинающимися на эту букву
+# Например:
+# list_ = ['sun', 'flowers', 'rumor', 'stranger', 'adventure', 'architect', 'accompany', 'abandon', 'cartoon']
+# хочу найти слово начинающееся на букву 's'
+# Результат:
+# ['sun', 'stranger']
+
+
+
+  
+
+
+
+
+"""=====================MEDIUM========================"""
+
+# /// TASK1 \\\
+# Вам даны 2 списка, напишите код, который будет выводить разницу первого списка от второго и наоборот
+# Например:
+# color1 = ["red", "orange", "green", "blue", "white"]
+# color2 = ["black", "yellow", "green", "blue"]
+# Результат:
+# Color1-Color2:  ['red', 'white', 'orange']
+# Color2-Color1:  ['black', 'yellow']
+
+
+# color1 = ["red", "orange", "green", "blue", "white"]
+# color2 = ["black", "yellow", "green", "blue"]
+# c = []
+# for i in color1:
+#     if i in c:
+#         continue
+#     for j in color2:
+#         if i == j:
+#             c.append(i)
+#             break
+ 
+# print(c)
+
+
+# /// TASK2 \\\
+# Вам даны 2 списка из чисел, нужно написать код, который будет выводить True, если есть хотя бы один общий элемент,
+# в ином случае False
+# Например:
+# list1 = [1,2,3,4,5]
+# list2 = [5,6,7,8,9]
+# Результат:
+# True
+
+
+
+
+
+# /// TASK3 \\\
+# Ван дан список, выведите числа, частота повторений которых больше или равно K
+# Например:
+# list_ = [4, 6, 4, 3, 3, 8, 4, 3, 4, 3, 8, 8]
+# Результат:
+# res = [4, 3, 8]
+
+
+
+
+
+
+
+# /// TASK4 \\\
+# Вам дан список из 3 чисел, выведите все возможные комбинации с этими числами
+# Например:
+# list_ = [1, 2, 3]
+# Результат:
+# 1 2 3
+# 1 3 2
+# 2 1 3
+# 2 3 1
+# 3 1 2
+# 3 2 1
+
+
+# import itertools
+
+# list = [1,2,3]
+# for x in itertools.permutations(list):
+#     print(x)
+
+
+# /// TASK5 \\\
+# Создайте список с 3 вложенными списками списками, где внутри должно быть три 0
+# Результат:
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+
+# res = []
+
+# for x in range (0,3):
+#     ls = []
+#     for x in range (0,3):
+#         ls.append(0)
+#     res.append(ls)
+# print(res)
+=====================================================================================================================
+
+Set- Множества
+Tuple - Кортеж
+
+
